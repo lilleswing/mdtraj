@@ -93,7 +93,7 @@ if sys.platform == 'win32':
 ################################################################################
 
 def format_extensions():
-    compiler_args = compiler.compiler_args_warn
+    compiler_args = compiler.compiler_args_warn + ['-fPIC']
 
     xtc = Extension('mdtraj.formats.xtc',
                     sources=['mdtraj/formats/xtc/src/xdrfile.c',
