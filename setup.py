@@ -133,7 +133,7 @@ dtr = Extension('mdtraj.formats.dtr',
 
 def rmsd_extensions():
     compiler_args = (compiler.compiler_args_openmp + compiler.compiler_args_sse2 +
-                     compiler.compiler_args_sse3 + compiler.compiler_args_opt) + ('-fPIC',)
+                     compiler.compiler_args_sse3 + compiler.compiler_args_opt + ['-fPIC'])
     compiler_libraries = compiler.compiler_libraries_openmp
 
     libtheobald = StaticLibrary(
